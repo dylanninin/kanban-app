@@ -31,6 +31,11 @@ export default class App extends React.Component {
     }
 
     deleteNote = (id, e) => {
+        /**
+         *  1) App --- onDelete -> Notes --- onDelete.bind(null,id) ---> Note
+         *
+         *  2) Note --- onDelete(id, e) ---> Notes --- onDelete(id, e) ---> App
+         */
         e.stopPropagation();
 
         this.setState({
