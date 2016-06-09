@@ -1,12 +1,13 @@
 import React from 'react';
+import uuid from 'uuid'
 
 const notes = [
     {
-        id: '1',
+        id: uuid.v4(),
         task: 'Learn React'
     },
     {
-        id: '2',
+        id: uuid.v4(),
         task: 'Do laundry'
     }
 ];
