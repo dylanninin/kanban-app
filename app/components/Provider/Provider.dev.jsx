@@ -8,7 +8,7 @@ setup(alt);
 
 chromeDebug(alt);
 
-React.Pref = require('react-addons-pref');
+React.Pref = require('react-addons-perf');
 
 export default ({children}) =>
     <AltContainer flux={alt}>
