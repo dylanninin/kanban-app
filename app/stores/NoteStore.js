@@ -1,5 +1,7 @@
 import uuid from 'uuid';
 
+import NoteActions from '../actions/NoteActions';
+
 export default class NoteStore {
     constructor() {
         this.notes = [
@@ -12,5 +14,17 @@ export default class NoteStore {
                 task: 'Do laundry'
             }
         ]
+    }
+
+    create(note) {
+        console.log('create a note', note);
+    }
+
+    update(updatedNote) {
+        console.log('update note', updatedNote);
+    }
+
+    delete(id) {
+        console.log('delete note', id);
     }
 }
