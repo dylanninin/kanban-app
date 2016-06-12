@@ -4,6 +4,8 @@ import uuid from 'uuid';
 
 import connect from '../libs/connect';
 
+import NoteActions from '../actions/NoteActions';
+
 class App extends React.Component {
 
     addNote = () => {
@@ -69,5 +71,7 @@ class App extends React.Component {
 
 export default connect(({notes}) => ({
     notes
-}))(App)
+}), {
+    NoteActions
+})(App)
 
