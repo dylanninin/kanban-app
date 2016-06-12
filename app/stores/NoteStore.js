@@ -1,9 +1,11 @@
 import uuid from 'uuid';
-
 import NoteActions from '../actions/NoteActions';
 
 export default class NoteStore {
     constructor() {
+
+        this.bindActions(NoteActions);
+
         this.notes = [
             {
                 id: uuid.v4(),
@@ -13,7 +15,7 @@ export default class NoteStore {
                 id: uuid.v4(),
                 task: 'Do laundry'
             }
-        ]
+        ];
     }
 
     create(note) {
