@@ -5,25 +5,11 @@ import Notes from './Notes';
 import NoteActions from '../actions/NoteActions';
 import LaneActions from '../actions/LaneActions';
 
+import LaneHeader from './LaneHeader';
+
 const Lane = ({
     lane, notes, LaneActions, NoteActions, ...props
     }) => {
-
-    const addNote = e => {
-        e.stopPropagation();
-
-        const noteId = uuid.v4();
-
-        NoteActions.create({
-            id: noteId,
-            task: 'New Task'
-        });
-
-        LaneActions.attachToLane({
-            laneId: lane.id,
-            noteId
-        });
-    };
 
     const deleteNote = (noteId, e) => {
         /**
@@ -52,12 +38,7 @@ const Lane = ({
 
     return (
         <div {...props}>
-            <div className="lane-header">
-                <div className="lane-add-note">
-                    <button className="add-note" onClick={addNote}> +</button>
-                </div>
-                <div className="lane-name">{lane.name}</div>
-            </div>
+            <LaneHeader lane={lane}/>
             <Notes notes={selectNotesByIds(notes, lane.notes)}
                    onNoteClick={activateNoteEdit}
                    onEdit={editNote}
