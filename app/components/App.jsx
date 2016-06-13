@@ -3,7 +3,7 @@ import uuid from 'uuid';
 
 import {compose} from 'redux';
 import {DragDropContext} from 'react-dnd';
-import HTML5Backend from 'react-html5-backend';
+import HTML5Backend from 'react-dnd-html5-backend';
 
 import connect from '../libs/connect';
 import Lanes from './Lanes';
@@ -22,10 +22,11 @@ const App = ({LaneActions, lanes}) => {
             <button className="add-lane" onClick={addLane}>+</button>
             <Lanes lanes={lanes}/>
         </div>
-    )
-}
+    );
+};
 
 export default compose(
+
     DragDropContext(HTML5Backend),
     connect(({lanes}) => ({
         lanes
