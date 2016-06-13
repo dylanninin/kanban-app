@@ -13,6 +13,7 @@ export default ({notes,
         <li key={id}>
             <Note className="note"
                   id={id}
+                  editing={editing}
                   onMove={LaneActions.move}
                   onClick={onNoteClick.bind(null, id)}
             >
