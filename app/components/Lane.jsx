@@ -56,7 +56,7 @@ const Lane = ({
 
 export default connect(
     ({notes}) => ({
-        notes,
+        notes
     }), {
         NoteActions
     }
