@@ -33,6 +33,10 @@ export default class LaneStore {
         });
     }
 
+    move({sourceId, targetId}) {
+        console.log(`source: ${sourceId}, target: ${targetId}`);
+    }
+
     attachToLane({laneId, noteId}) {
         this.setState({
            lanes: this.lanes.map(lane => {
