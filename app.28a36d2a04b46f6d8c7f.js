@@ -1,0 +1,2 @@
+webpackJsonp([0,3],[function(e,t,l){"use strict";function n(e){return e&&e.__esModule?e:{"default":e}}var u=l(1),d=n(u),r=l(34),a=n(r);a["default"].render(d["default"].createElement("div",null,"Hello world"),document.getElementById("app"))}]);
+//# sourceMappingURL=app.28a36d2a04b46f6d8c7f.js.map
